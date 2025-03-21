@@ -1,0 +1,54 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização geral */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Lista de opções */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0;
+}
+
+a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    a {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
