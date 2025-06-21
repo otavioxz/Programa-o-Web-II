@@ -109,7 +109,7 @@ biblioteca-laravel/
 │       └── Book.php
 ├── database/
 │   ├── migrations/
-│   └── database.sqlite
+│   └── database.mysql
 ├── public/
 │   ├── css/custom.css
 │   └── images/
@@ -125,8 +125,8 @@ biblioteca-laravel/
 
 ## Avaliação dos Requisitos
 
-| Requisito | Pontos | Status | Localização |
-|-----------|--------|--------|-------------|
+| Requisito | Pontos | Status | 
+|-----------|--------|--------|
 | Laravel + BD  ✅ | Todo o projeto |
 | CRUD 2 tabelas  ✅ | Authors/Books Controllers |
 | Relacionamento  ✅ | Models + Migrations |
