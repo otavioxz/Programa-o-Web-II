@@ -1,0 +1,183 @@
+/* Estilo do Menu Lateral */
+.side-menu {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f81c1c;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.side-menu a i {
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.side-menu a span {
+    flex-grow: 1;
+}
+
+/* Altera a cor ao passar o mouse */
+.side-menu a:hover {
+    color: #f1f1f1;
+    background-color: #333;
+}
+
+/* Menu aberto */
+.side-menu.open {
+    width: 250px;
+}
+
+/* Estilo do conteúdo */
+.content {
+    transition: margin-left 0.5s ease;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.content.shifted {
+    margin-left: 250px; /* A mesma largura do menu lateral */
+}
+
+/* Estilo do botão para abrir o menu */
+.open-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    border: none;
+    color: #f70b0b;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Estilo das caixas de usuário */
+.ranking-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Caixa de cada usuário */
+.usuario-box {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    border: 2px solid #ccc;
+    transition: box-shadow 0.3s ease;
+}
+
+.usuario-box .avatar {
+    font-size: 50px;
+    color: #f81c1c;
+}
+
+.usuario-box .pontos {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.usuario-box .user-info {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.usuario-box .rank {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #333;
+    background-color: #f81c1c;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Efeito de escada para o 1º, 2º e 3º lugares */
+.first-place {
+    width: 300px;
+    height: 300px;
+    background-color: #ffd700;
+    z-index: 3;
+}
+
+.first-place .crown {
+    font-size: 100px;
+    color: #ffd700;
+    position: absolute;
+    top: -80px;
+}
+
+.second-place {
+    width: 250px;
+    height: 250px;
+    background-color: #C0C0C0;
+}
+
+.third-place {
+    background-color: #CD7F32;
+}
+
+/* Estilo para o Tema Escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .content {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffcc00;
+}
+
+.theme-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #f70b0b;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Mudando a cor do ícone no tema escuro */
+body.dark-mode .theme-toggle-btn {
+    color: #ffcc00;
+}

@@ -1,0 +1,69 @@
+/* Estilo Geral para o Tema Claro */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Estilo para o Tema Escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    color: #e0e0e0;
+}
+
+body.dark-mode .content {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffcc00;
+}
+
+/* Estilo do botão de alternância */
+.theme-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #f70b0b;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Mudando a cor do ícone no tema escuro */
+body.dark-mode .theme-toggle-btn {
+    color: #ffcc00;
+}
+
+/* Estilos gerais */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}

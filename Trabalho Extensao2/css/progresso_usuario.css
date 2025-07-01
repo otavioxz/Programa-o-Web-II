@@ -1,0 +1,197 @@
+/* Estilo do Menu Lateral */
+.side-menu {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f81c1c;
+    display: flex;
+    align-items: center; /* Alinha ícone e texto */
+    transition: 0.3s;
+}
+
+.side-menu a i {
+    margin-right: 15px; /* Espaço entre o ícone e o texto */
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+.side-menu a span {
+    flex-grow: 1; /* Faz o texto crescer para ocupar o espaço disponível */
+}
+
+/* Altera a cor ao passar o mouse */
+.side-menu a:hover {
+    color: #f1f1f1;
+    background-color: #333; /* Altera o fundo ao passar o mouse */
+}
+
+/* Adicionando a classe que abre o menu */
+.side-menu.open {
+    width: 250px; /* Largura do menu quando aberto */
+}
+
+/* Estilo para o conteúdo */
+.content {
+    transition: margin-left 0.5s ease;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Modificando o conteúdo ao abrir o menu */
+.content.shifted {
+    margin-left: 250px; /* Desloca o conteúdo para a direita quando o menu é aberto */
+}
+
+/* Estilo para a seção de prêmios */
+.rewards-section {
+    margin-top: 60px; /* Certifique-se de que a seção fique abaixo do menu */
+    text-align: center;
+    transition: margin-left 0.5s ease; /* Adicionando transição para a seção de prêmios */
+}
+
+/* Modificando a posição dos prêmios ao abrir o menu */
+.rewards-section.shifted {
+    margin-left: 250px; /* Desloca a seção de prêmios para a direita */
+}
+
+/* Estilo do botão para abrir o menu */
+.open-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    border: none;
+    color: #f70b0b;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Estilo para a caixa que contém as imagens */
+.image-box {
+    width: 200px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.image-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.image-box p {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+/* Centralizando a seção de prêmios */
+.rewards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Ajustando a exibição das recompensas */
+.reward-box {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reward-box h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.reward-image {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.reward-box p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+/* Quando o prêmio for conquistado */
+.reward-box.conquistado {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #388E3C;
+}
+
+/* Quando o prêmio não for conquistado */
+.reward-box.nao-conquistado {
+    background-color: #f44336;
+    color: white;
+    border: 2px solid #D32F2F;
+}
+
+
+
+/* Estilo para o Tema Escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    color: #e0e0e0;
+}
+
+body.dark-mode .content {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffcc00;
+}
+
+.theme-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #f70b0b;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Mudando a cor do ícone no tema escuro */
+body.dark-mode .theme-toggle-btn {
+    color: #ffcc00;
+}

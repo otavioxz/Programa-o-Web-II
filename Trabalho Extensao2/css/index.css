@@ -1,0 +1,156 @@
+/* Estilo do Menu Lateral */
+.side-menu {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f81c1c;
+    display: flex;
+    align-items: center; /* Alinha ícone e texto */
+    transition: 0.3s;
+}
+
+.side-menu a i {
+    margin-right: 15px; /* Espaço entre o ícone e o texto */
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+.side-menu a span {
+    flex-grow: 1; /* Faz o texto crescer para ocupar o espaço disponível */
+}
+
+/* Altera a cor ao passar o mouse */
+.side-menu a:hover {
+    color: #f1f1f1;
+    background-color: #333; /* Altera o fundo ao passar o mouse */
+}
+
+/* Adicionando a classe que abre o menu */
+.side-menu.open {
+    width: 250px; /* Largura do menu quando aberto */
+}
+
+/* Estilo para o conteúdo */
+.content {
+    transition: margin-left 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+}
+
+/* Modificando o conteúdo ao abrir o menu */
+.content.shifted {
+    margin-left: 250px; /* Desloca o conteúdo para a direita quando o menu é aberto */
+}
+
+/* Estilo do botão para abrir o menu */
+.open-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    border: none;
+    color: #f70b0b;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Estilo da caixa com o ícone de reciclagem */
+.recycle-box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Sem borda ou fundo */
+    margin-bottom: 20px; /* Espaço abaixo do ícone */
+    animation: girar 2s linear infinite; /* Animação para girar */
+}
+
+/* Definindo a animação */
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.recycle-box i {
+    font-size: 80px; /* Ícone maior */
+    color: #f81c1c;
+}
+
+/* Estilo da mensagem de boas-vindas */
+.welcome-message {
+    margin-top: 20px; /* Espaço entre o ícone e a mensagem */
+}
+
+.welcome-message h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.welcome-message p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+
+
+
+/* Estilo para o Tema Escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    color: #e0e0e0;
+}
+
+body.dark-mode .content {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffcc00;
+}
+
+.theme-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #f70b0b;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Mudando a cor do ícone no tema escuro */
+body.dark-mode .theme-toggle-btn {
+    color: #ffcc00;
+}

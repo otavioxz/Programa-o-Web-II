@@ -1,0 +1,272 @@
+/* Estilo do Menu Lateral */
+.side-menu {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f81c1c;
+    display: flex;
+    align-items: center; /* Alinha ícone e texto */
+    transition: 0.3s;
+}
+
+.side-menu a i {
+    margin-right: 15px; /* Espaço entre o ícone e o texto */
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+.side-menu a span {
+    flex-grow: 1; /* Faz o texto crescer para ocupar o espaço disponível */
+}
+
+/* Altera a cor ao passar o mouse */
+.side-menu a:hover {
+    color: #f1f1f1;
+    background-color: #333; /* Altera o fundo ao passar o mouse */
+}
+
+/* Adicionando a classe que abre o menu */
+.side-menu.open {
+    width: 250px; /* Largura do menu quando aberto */
+}
+
+/* Estilo para o conteúdo */
+.content {
+    transition: margin-left 0.5s ease;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Modificando o conteúdo ao abrir o menu */
+.content.shifted {
+    margin-left: 250px; /* Desloca o conteúdo para a direita quando o menu é aberto */
+}
+
+/* Estilo do botão para abrir o menu */
+.open-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    border: none;
+    color: #f70b0b;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Estilo do formulário de pesquisa */
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-container input {
+    width: calc(100% - 22px); /* Para ajustar a largura com o padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f81c1c;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #e00b0b;
+}
+
+/* Estilo das caixas de usuário */
+.usuarios-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.usuario-box {
+    width: 250px;  /* Aumentei a largura da caixa para dar mais espaço */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* Ajustei a altura para acomodar o avatar e os botões */
+}
+
+/* Silhueta do avatar - Aumentando o tamanho */
+.usuario-box .avatar {
+    font-size: 80px; /* Aumentei o tamanho do avatar */
+    color: #888;
+    margin-bottom: 15px; /* Deixei mais espaço abaixo do avatar */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+}
+
+/* Quantidade de pontos */
+.usuario-box .pontos {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f81c1c;
+}
+
+/* Informações do usuário */
+.usuario-box .user-info {
+    margin-top: 10px;
+}
+
+.usuario-box p {
+    margin: 5px 0;
+}
+
+.usuario-box p strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.usuario-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilo dos botões dentro da caixa de usuário */
+.user-actions {
+    margin-top: 10px; /* Dá um pouco de espaço acima dos botões */
+    display: flex;
+    flex-direction: column; /* Faz os botões ficarem empilhados */
+    gap: 10px; /* Espaçamento entre os botões */
+    width: 100%; /* Faz com que os botões ocupem toda a largura disponível */
+    justify-content: center; /* Centraliza os botões verticalmente */
+    align-items: center; /* Centraliza os botões horizontalmente */
+}
+
+.user-actions .btn {
+    display: inline-block;
+    padding: 12px 20px; /* Aumentando um pouco o padding para maior conforto */
+    background-color: #f81c1c;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 5px;
+    text-align: center;
+    width: 100%; /* Garantir que o botão ocupe toda a largura da caixa */
+    max-width: 150px; /* Limita o tamanho máximo dos botões */
+    box-sizing: border-box; /* Para que o padding não estoure o tamanho total */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.user-actions .btn:hover {
+    background-color: #e00b0b; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+}
+
+/* Botão "Adicionar" */
+.user-actions .btn:first-child {
+    background-color: #4CAF50; /* Cor verde para o botão de adicionar */
+}
+
+.user-actions .btn:first-child:hover {
+    background-color: #45a049; /* Cor mais escura para o hover do botão de adicionar */
+}
+
+/* Botão "Editar" */
+.user-actions .btn:last-child {
+    background-color: #008CBA; /* Cor azul para o botão de editar */
+}
+
+.user-actions .btn:last-child:hover {
+    background-color: #007B9A; /* Cor mais escura para o hover do botão de editar */
+}
+
+/* Efeito de hover nas caixas de usuário */
+.usuario-box:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho da caixa */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+    background-color: #f5f5f5; /* Muda a cor de fundo */
+    cursor: pointer; /* Muda o cursor para indicar que é interativo */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transição suave */
+}
+
+
+
+/* Estilo para o Tema Escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    color: #e0e0e0;
+}
+
+body.dark-mode .content {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffcc00;
+}
+
+.theme-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #f70b0b;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Mudando a cor do ícone no tema escuro */
+body.dark-mode .theme-toggle-btn {
+    color: #ffcc00;
+}
